@@ -165,7 +165,6 @@ sudo ./make.sh --add
 
 单击’i'字样右侧的像播放键的图标，再单击同一栏最左边的图标，启动后clover boot manager 内直接回车
 
-![defaultpage](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/defaultpage.png)
 
 ### 安装macOS
 来到这个界面（该界面唯一的区别是截图上的Install 应为Reinstall，其它无改变）后
