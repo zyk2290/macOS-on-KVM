@@ -5,6 +5,7 @@
  5. 分配给客户机的 GPU 的 ROM 必须支持 UEFI
   5. 多信号源显示器，或多个显示器（多条视频线）
 
+
 # 本人电脑配置
 显卡：GTX1070
 主板：华硕玩家国度 Z270-GAMING（UEFI，CSM关闭）
@@ -12,13 +13,13 @@
 内存：16G * 2 （DDR4）
 （如果主板是与我的相似的话，是最好的）
 
-![GPU_1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/graphics1.PNG)
+![GPU_1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/graphics1.PNG)
 
-![GPU-2](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/graphics2.PNG)
+![GPU-2](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/graphics2.PNG)
 
-![CPU](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/cpu.PNG)
+![CPU](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/cpu.PNG)
 
-![MOTHERBOARD](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/motherboard.PNG)
+![MOTHERBOARD](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/motherboard.PNG)
 
 # 写在（伪）最前
 
@@ -95,7 +96,7 @@ QEMU
  1.进入 https://ubuntu.com/download/desktop 下载Ubuntu 安装镜像（我选择了19.04）
  2.使用一款自己顺手的U盘启动制作工具（推荐Rufus）
 这里给大家看一下我的配置
-![Rufus_conf](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Rufus_conf.PNG)
+![Rufus_conf](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Rufus_conf.PNG)
 
  3.开始安装Ubuntu（最好UEFI）
 
@@ -131,14 +132,14 @@ sudo systemctl start libvirtd
 确认上面几步已经完成的，重启
 打开虚拟系统管理器（在活动里搜索，关键词：virt-manager）
 可以看到以下界面
-![virt-manager_without](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Capture10.PNG)
+![virt-manager_without](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Capture10.PNG)
 
 在终端内，将当前工作文件夹切换到macOS-Simple-KVM 里，执行
 ```shell
 sudo ./make.sh --add
 ```
 可以看到虚拟系统管理器出现一个新的虚拟机
-![virt-manager_with](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Capture11.PNG)
+![virt-manager_with](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Capture11.PNG)
 
 ### 创建虚拟硬盘
 
@@ -148,46 +149,46 @@ sudo ./make.sh --add
 其中[disk_size] 里填虚拟硬盘大小
 
 接着，选定该虚拟机，双击，在选项卡下找到一个带‘i’ 字样的图标，如图
-![virtmanager_i1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Capture13.PNG)
+![virtmanager_i1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/Capture13.PNG)
 
 单击“选定“选择或创建自定义存储”并在下方找到“管理”，并再选择“本地浏览”，找到刚才创建的虚拟硬盘，并选定它
 
 ### 更改网卡配置
 
 找到旁边有NIC 字样的选项卡，按下图调整
-![networkard-0](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/networkard-0.PNG)
+![networkard-0](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/networkard-0.PNG)
 
-![networkcard-1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/networkcard-1.png)
+![networkcard-1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/networkcard-1.png)
 
 
 ### 启动虚拟机
 
 单击’i'字样右侧的像播放键的图标，再单击同一栏最左边的图标，启动后clover boot manager 内直接回车
 
-![defaultpage](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/defaultpage.png)
+![defaultpage](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/defaultpage.png)
 
 ### 安装macOS
 来到这个界面（该界面唯一的区别是截图上的Install 应为Reinstall，其它无改变）后
 
-![macos_install](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/macos_install.PNG)
+![macos_install](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/macos_install.PNG)
 
 点击 Disk Utility, 然后在侧边栏选择你要安装的硬盘（截图与实际会有一些不同，可以看大小大概知道要安装的硬盘）
 
-![diskutility](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/diskutility.PNG)
+![diskutility](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/diskutility.PNG)
 
 单击Erase
 
-![diskutility_diskerase](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/diskutility_diskerase.PNG)
+![diskutility_diskerase](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/diskutility_diskerase.PNG)
 
 按自己需求改名，接着按Erase（不要改其它内容）
 
 然后关闭Disk Utility
 
-![macos_install](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/macos_install.PNG)
+![macos_install](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/macos_install.PNG)
 
 选择Reinstall macOS （该截图与实际不符）
 
-来到以下界面![macos_start](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/macos_start.PNG)
+来到以下界面![macos_start](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macos-install/macos_start.PNG)
 
 接下来就接受许可协议，选择安装的硬盘（分区），接着一路下一步
 
@@ -197,7 +198,7 @@ sudo ./make.sh --add
 
 在这里注意一下，在其它设备上试过选择在上下滑动时死机，建议直接选第一个
 
-![macos_setup-1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/macos_setup-1.PNG)
+![macos_setup-1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/macos_setup-1.PNG)
 
 下面就不贴图片了
 
@@ -217,21 +218,21 @@ sudo ./make.sh --add
 
 进入桌面后，打开设置
 
-![i18n](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n.PNG)
+![i18n](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n.PNG)
 
 选择Language & Region
 
-![i18n-1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n-1.PNG)
+![i18n-1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n-1.PNG)
 
 按下图改变地区的设置
 
 在界面中找到“+”键，添加简体中文
 
-![i18n-2](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n-2.PNG)
+![i18n-2](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n-2.PNG)
 
 如果要使用中文的话选择右边的选项，如果要使用英文的话，选左边
 
-![i18n-3](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n-3.PNG)
+![i18n-3](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/macOS-setup/i18n-3.PNG)
 
 **基本安装结束**
 
@@ -242,16 +243,16 @@ sudo ./make.sh --add
 打开 http://www.macvidcards.com/drivers.html ，拉到最下面
 找到下图的驱动，双击下载
 
-![1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/1.PNG)
+![1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/1.PNG)
 
 
 之后用U 盘将该驱动送到macOS 上
 
 在虚拟机中插入U 盘的教程如下：
 
-![t-1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/t-1.PNG)
+![t-1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/t-1.PNG)
 
-选择“添加硬件”，在弹出的窗口中选择”USB 主机设备“，同时选择你的U 盘，最后按“完成”，如下图![t-2](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia\t-2.PNG)
+选择“添加硬件”，在弹出的窗口中选择”USB 主机设备“，同时选择你的U 盘，最后按“完成”，如下图![t-2](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia\t-2.PNG)
 
 然后就应该可以在macOS 上打开下载的驱动文件了
 
@@ -259,17 +260,17 @@ sudo ./make.sh --add
 
 打开安装文件
 
-![3](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/3.PNG)
+![3](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/3.PNG)
 
 一路下一步
 
 如遇到以下窗口
 
-![5](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/5.PNG)
+![5](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/5.PNG)
 
 选择左边那个选项
 
-![6](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/6.PNG)
+![6](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/6.PNG)
 
 划红线的能点的都点上
 
@@ -283,7 +284,7 @@ sudo nano /etc/default/grub
 ```
 在该配置文件内找到下图划蓝线这一行
 
-![7](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/7.PNG)
+![7](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/7.PNG)
 
 加上这些字段```nouveau.modeset=0 rd.driver.blacklist=nouveau intel_iommu=on iommu=pt vfio-pci.ids=```
 
@@ -293,7 +294,7 @@ sudo nano /etc/default/grub
 
 再打开一个终端窗口，执行```lspci -nn``` ，以我的电脑为例
 
-![9](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/9.PNG)
+![9](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/9.PNG)
 
 找到你的显卡，在后面找到设备码，在我这里的例子是10de:1b81
 
@@ -303,7 +304,7 @@ sudo nano /etc/default/grub
 
 贴上我的例子
 
-![8](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/8.PNG)
+![8](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/8.PNG)
 
 接着Ctrl + x ，Y 键保存退出，运行
 ```shell
@@ -326,7 +327,7 @@ sudo update-grub
 
 贴上我的运行后的例子
 
-![10](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/10.PNG)
+![10](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/10.PNG)
 
 
 
@@ -340,15 +341,15 @@ sudo update-grub
 
 再次打开虚拟机，找到在上面那一栏的如图示的图标（已划红线），单击
 
-![11](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/11.PNG)
+![11](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/11.PNG)
 
 再单击在下图中鼠标选择的选项
 
-![12](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/12.PNG)
+![12](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/12.PNG)
 
 输密码，在以下对话框内选择“Not Now” ，接着手动关机
 
-![14](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/14.PNG)
+![14](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/14.PNG)
 
 
 
@@ -359,13 +360,13 @@ sudo update-grub
 
 移除下列两个设备
 
-![15](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/15.PNG)
+![15](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/15.PNG)
 
 
 
 将你的显卡添加进来，选择添加硬件，找到PCI 主机设备，在左侧的设备列表中找到你的显卡以及板载显卡的声卡，依次添加
 
-![18](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/18.PNG)
+![18](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/18.PNG)
 
 接着参考上面的U 盘插入虚拟机的教程，**先将刚才的U 盘移除**
 
@@ -373,11 +374,11 @@ sudo update-grub
 
 移除安装盘（硬盘序号可能不对，但文件名“BaseSystem.img" 还是一样）
 
-![17](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia\17.PNG)
+![17](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia\17.PNG)
 
 接着开机
 
-![16](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/16.PNG)
+![16](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/16.PNG)
 
 在该界面上，按Enter 键
 
@@ -402,51 +403,51 @@ sudo update-grub
 
 打开刚刚下载的CCV，在侧边栏里选择”Mount EFI“
 
-![1](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/1.PNG)
+![1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/1.PNG)
 
 在下方的EFI Partitions 中也应该有两个选择，两个都挂载，等会儿看一下哪个是对的
 
-![2](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/2.PNG)
+![2](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/2.PNG)
 
 挂载成功以后，单击旁边的Open Partition，如果分区内存在EFI\Clover 一系列文件夹的话，说明就是这个盘
 
-![3](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/3.PNG)
+![3](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/3.PNG)
 
 打开到EFI/Clover 文件夹后，打开config.plist 文件（如果不是以CCV 打开，则右键打开方式，再不行直接拖进CCV 的窗口）
 
 选择侧边栏上的SMBIOS ，单击红色框，选择与你最相似的机器（不用死抠）
 
-![5](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/5.PNG)
+![5](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/5.PNG)
 
-![6](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/6.PNG)
+![6](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/6.PNG)
 
 单击红框的按钮
 
-![7](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/7.PNG)
+![7](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/7.PNG)
 
 输完验证码后，若出现以下内容，则说明过了，如果出现一台mac 电脑的话，请再上图的Serial Number 旁边再按一下Generate New，再重复一遍
 
-![9](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/9.PNG)
+![9](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/9.PNG)
 
 接着再按下图红框按钮
 
-![7 - Copy](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/7%20-%20Copy.PNG)
+![7 - Copy](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/7%20-%20Copy.PNG)
 
 （接下来的内容全在https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/ 抄的）
 
 出现以下内容，也是再按Generate Now 再按Check Coverage 按钮再来一次
 
-![12 - everymac - Wrong](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/12%20-%20everymac%20-%20Wrong.png)
+![12 - everymac - Wrong](https://https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/12%20-%20everymac%20-%20Wrong.png)
 
-出现以下内容说明成功![13 - everymac - Right](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/13%20-%20everymac%20-%20Right.png)
+出现以下内容说明成功![13 - everymac - Right](https://https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/13%20-%20everymac%20-%20Right.png)
 
 保存退出
 
-接着打开虚拟机管理界面，选择硬件详情![10](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/10.PNG)
+接着打开虚拟机管理界面，选择硬件详情![10](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/10.PNG)
 
 选择NIC 开头的选项
 
-![11](raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/11.PNG)
+![11](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/11.PNG)
 
 将右侧中的勾选框中的active 给取消掉，应用，即可断网（开网即相反）
 
