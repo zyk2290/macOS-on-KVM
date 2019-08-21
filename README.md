@@ -436,9 +436,9 @@ sudo update-grub
 
 出现以下内容，也是再按Generate Now 再按Check Coverage 按钮再来一次
 
-![12 - everymac - Wrong](https://https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/12%20-%20everymac%20-%20Wrong.png)
+![12 - everymac - Wrong](https://www.tonymacx86.com/media/06-everymac-wrong.187074/full?d=1470318026)
 
-出现以下内容说明成功![13 - everymac - Right](https://https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/apple-id/13%20-%20everymac%20-%20Right.png)
+出现以下内容说明成功![13 - everymac - Right](https://www.tonymacx86.com/media/07-everymac-right.187075/full?d=1470318026)
 
 保存退出
 
