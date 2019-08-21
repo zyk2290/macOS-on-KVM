@@ -251,7 +251,7 @@ sudo ./make.sh --add
 
 ![t-1](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/t-1.PNG)
 
-选择“添加硬件”，在弹出的窗口中选择”USB 主机设备“，同时选择你的U 盘，最后按“完成”，如下图![t-2](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia\t-2.PNG)
+选择“添加硬件”，在弹出的窗口中选择”USB 主机设备“，同时选择你的U 盘，最后按“完成”，如下图![t-2](https://raw.githubusercontent.com/zyk2290/macOS-on-KVM/master/Snippings/nvidia/t-2.PNG)
 
 然后就应该可以在macOS 上打开下载的驱动文件了
 
